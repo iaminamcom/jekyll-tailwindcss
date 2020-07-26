@@ -1,19 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    {% feed_meta %}
-    {% seo %}
-    <link rel="stylesheet" href="/css/site.css">
+    {% include default/head.html %}
   </head>
   <body>
-    <section>
-      {{ content }}
-    </section>
-
-    {% if jekyll.environment == 'production' %}
-      {% include analytics.html %}
-    {% endif %}
+    {% include default/header.html %}
+    <main class="">{{ content }}</main>
+    {% include default/footer.html %}
+    <!-- scripts -->
+    {% include default/scripts.html %} {% if jekyll.environment == 'production'
+    %} {% include default/analytics.html %} {% endif %}
   </body>
 </html>
-
