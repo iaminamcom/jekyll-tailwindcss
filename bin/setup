@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+
+set -e
+
+echo "==> Running... bundle install"
+bundle install
+
+echo "==> Running... npm install"
+npm install
+
+if [ ! -f ./tailwind.config.js ]; then
+  echo "==> Initializing tailwindcss"
+  tailwind init tailwind.config.js --no-comments
+fi
+
+echo "==> Reinitializing Git repository"
+rm -rf .git && git init
+
