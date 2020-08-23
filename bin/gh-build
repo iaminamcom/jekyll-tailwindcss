@@ -1,0 +1,28 @@
+#!/bin/sh
+
+echo "removing old site2.css file from css dir"
+rm css/site2.css
+
+echo "running jekyll"
+JEKYLL_ENV=production bundle exec jekyll build
+
+echo "moving production ready file to css/"
+mv _site/css/site.css css/site2.css
+
+
+echo -n "Commit message? "
+read message
+echo $message
+
+echo "staging"
+
+git add .
+git commit -m "$message"
+
+echo "pushing"
+sleep .2
+echo "pushing......."
+sleep .2
+echo "pushing.............."
+
+git push origin master

@@ -4,5 +4,4 @@ _site
 .jekyll-metadata
 node_modules
 Gemfile.lock
-tailwind.config.js
 *.zip
