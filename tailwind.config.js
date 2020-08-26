@@ -1,16 +1,8 @@
 module.exports = {
+  purge: [],
   theme: {
-    extend: {
-      fontFamily: {
-        body: ["Graphik", "sans-serif"],
-      },
-      colors: {},
-      margin: {
-        "96": "24rem",
-        "128": "32rem",
-      },
-    },
+    extend: {},
   },
   variants: {},
   plugins: [],
-};
+}

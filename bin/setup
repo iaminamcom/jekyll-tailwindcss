@@ -6,7 +6,11 @@ echo "==> Running... bundle install"
 bundle install
 
 echo "==> Running... npm install"
-npm install
+npm i
+
+echo "==> Running... npm update"
+echo "==> Checking for updates"
+npm update
 
 if [ ! -f ./tailwind.config.js ]; then
   echo "==> Initializing tailwindcss"
